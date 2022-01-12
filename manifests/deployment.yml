@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: naveenvasudevanaks 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: naveenvasudevanaks
+  template:
+    metadata:
+      labels:
+        app: naveenvasudevanaks 
+    spec:
+      containers:
+        - name: naveenvasudevanaks 
+          image: itcadmin.azurecr.io/naveenvasudevanaks
+          ports:
+          - containerPort: 80
